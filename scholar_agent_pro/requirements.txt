@@ -1,0 +1,24 @@
+# ScholarAgent Pro 依赖库列表
+
+# Web应用框架
+streamlit>=1.30.0
+
+# 数据处理和分析
+pandas>=2.0.0
+numpy>=1.24.0
+statsmodels>=0.14.0
+
+# 网页爬虫
+DrissionPage>=4.0.0
+
+# LLM API调用
+openai>=1.0.0
+
+# 数据可视化
+plotly>=5.15.0
+
+# HTTP请求
+requests>=2.31.0
+
+# 工具库
+python-dotenv>=1.0.0

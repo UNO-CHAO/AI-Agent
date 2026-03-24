@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarAgent Pro - 智能文献研究助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#3b82f6 0.5px, transparent 0.5px), radial-gradient(#3b82f6 0.5px, #ffffff 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+        /* 数学公式样式优化 */
+        .math-formula {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            background-color: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-white">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-3xl text-blue-600"></i>
+                    <span class="font-bold text-xl text-slate-800 tracking-tight">ScholarAgent Pro</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#functions" class="text-slate-600 hover:text-blue-600 font-medium transition">核心功能</a>
+                    <a href="#ui" class="text-slate-600 hover:text-blue-600 font-medium transition">使用界面</a>
+                    <a href="#scenarios" class="text-slate-600 hover:text-blue-600 font-medium transition">应用场景</a>
+                    <a href="#demo" class="text-slate-600 hover:text-blue-600 font-medium transition">操作演示</a>
+                </div>
+                <a href="#demo" class="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                    <i class="fa-regular fa-circle-play"></i> 开始演示
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-blue-100 text-blue-700 text-sm font-bold mb-6 border border-blue-200">v2.0 深度计量版</span>
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 text-slate-900 leading-tight">
+                科研全流程 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">智能加速引擎</span>
+            </h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                告别繁琐的手动检索与数据清洗。ScholarAgent Pro 集成双引擎抓取、计量经济学回归模型与生成式 AI，助您从海量文献中快速提炼核心洞察。
+            </p>
+        </div>
+    </section>
+
+    <section id="functions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-slate-900 section-title">智能体核心功能</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto mb-16">
+                    不仅仅是爬虫，更是具备分析能力的科研助理。系统围绕文献研究的痛点，提供从数据获取到报告生成的全链路解决方案。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-earth-asia text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">中英双源混合检索</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        打破语言壁垒，同时接入 CNKI（知网）与 OpenAlex（全球英文库）。内置智能反爬与期刊分级算法，支持自动筛选 CSSCI、北大核心及顶刊文献。
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-brain text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">语义关键词增强</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        集成 DeepSeek 大模型，能够理解模糊的自然语言描述（如“研究数字经济的影响”），自动提取核心词并精准翻译为英文学术术语，提升检索查全率。
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-chart-line text-2xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">自动化计量分析</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        内嵌 Statsmodels 统计模块，自动构建一元线性回归模型。计算年份与发文量的趋势斜率，量化关键词频率与被引量的相关性 (<span class="font-bold">R<sup>2</sup></span>、P值)，用数据验证研究热度。
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+                        <i class="fa-solid fa-file-pen text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">生成式综述报告</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        基于检索到的数百篇摘要，AI 自动撰写结构化文献综述。涵盖研究背景、流派分类及趋势预测，并生成可交互的 HTML 知识图谱（Mindmap）。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ui" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 section-title">现代化交互界面</h2>
+                <p class="text-slate-600 max-w-3xl mx-auto">
+                    基于 Streamlit 打造的响应式仪表盘，左侧侧边栏集中管理配置，右侧主区域实时呈现数据洞察，所见即所得。
+                </p>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+                <img src="img_dashboard_full.png" alt="ScholarAgent Pro 主界面全览" class="w-full transform hover:scale-105 transition duration-500">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">A</div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">控制侧边栏</h4>
+                        <p class="text-sm text-slate-600">集中管理 API 密钥、研究描述输入、关键词编辑及抓取策略配置。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">B</div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">多维可视化区</h4>
+                        <p class="text-sm text-slate-600">顶部展示按语言分类的年份分布图，中部展示关键词云或频次，直观反映数据结构。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">C</div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">工作流标签页</h4>
+                        <p class="text-sm text-slate-600">通过顶部 Tabs 切换“数据抓取”、“计量分析”与“智能综述”，流程清晰互不干扰。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scenarios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 section-title">多元化应用场景</h2>
+                <p class="text-slate-600">赋能不同阶段的科研工作者，提升学术生产力</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition">
+                    <div class="mb-4 text-blue-600"><i class="fa-solid fa-graduation-cap text-3xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">学位论文开题</h3>
+                    <p class="text-slate-600 text-sm">
+                        面对陌生的研究领域，快速梳理近 10 年的核心文献与演进脉络。通过关键词共现分析，寻找现有研究的空白点（Gap），为选题提供数据支撑。
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl border border-indigo-100 hover:shadow-lg transition">
+                    <div class="mb-4 text-indigo-600"><i class="fa-solid fa-magnifying-glass-dollar text-3xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">课题申报与标书撰写</h3>
+                    <p class="text-slate-600 text-sm">
+                        利用时间序列回归模型预测学科热度，证明选题的前沿性。生成高被引文献综述，快速构建扎实的“国内外研究现状”章节。
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl border border-teal-100 hover:shadow-lg transition">
+                    <div class="mb-4 text-teal-600"><i class="fa-solid fa-users-viewfinder text-3xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">跨学科交叉研究</h3>
+                    <p class="text-slate-600 text-sm">
+                        同时检索计算机科学（英文库）与社会科学（中文库），通过双语关键词映射，发现不同学科对同一问题的不同视角与解决方法。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 section-title">实操演示流程</h2>
+                <p class="text-slate-600">从配置到产出的完整五步工作流</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-24">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-6">STEP 01</div>
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">语义驱动的智能关键词解析</h3>
+                    <p class="text-lg text-slate-600 mb-8 leading-loose">
+                        摒弃传统的机械式搜索，ScholarAgent Pro 引入 DeepSeek 语义理解引擎。用户仅需以自然语言描述模糊的研究构想（例如“人工智能在金融中的应用”），系统即可自动解构语义，提取核心变量，并基于学术语料库生成精准的中英文检索关键词（Keywords）。支持人工二次校对，确保从检索源头即具备极高的信度与效度。
+                    </p>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-wand-magic-sparkles text-indigo-500 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">NLP 语义增强</h4>
+                                <p class="text-xs text-slate-500 mt-1">自动识别“影响”、“机制”、“路径”等学术关联词，转换为检索式逻辑。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <img src="img_step1_keyword_parsing.png" alt="智能关键词解析界面" class="rounded-xl shadow-xl border border-slate-200 w-full transform -rotate-1 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 mb-24">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <div class="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold mb-6">STEP 02</div>
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">精准抓取策略配置</h3>
+                    <p class="text-lg text-slate-600 mb-8 leading-loose">
+                        在侧边栏中，您可以灵活制定抓取规则。系统提供三种智能模式以适应不同的研究目的，从源头把控数据质量。
+                    </p>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4 mb-8">
+                        <div>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded font-bold mb-1">推荐</span>
+                            <h4 class="text-base font-bold text-slate-800 inline ml-1">混合均衡模式</h4>
+                            <p class="text-sm text-slate-600 mt-1">平衡抓取高被引的经典文献与最新的前沿文献，确保研究视角既有深度又有广度。</p>
+                        </div>
+                        <div class="border-t border-slate-100 pt-3">
+                            <h4 class="text-base font-bold text-slate-800">🔥 高被引优先</h4>
+                            <p class="text-sm text-slate-600 mt-1">优先抓取被引次数最高的文献，适用于快速梳理领域内的经典理论与奠基性工作。</p>
+                        </div>
+                        <div class="border-t border-slate-100 pt-3">
+                            <h4 class="text-base font-bold text-slate-800">🆕 相关度优先</h4>
+                            <p class="text-sm text-slate-600 mt-1">优先抓取与关键词匹配度最高的文献，适用于追踪最新的研究动态与具体问题的解答。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <img src="img_settings_strategy.png" alt="抓取策略配置" class="rounded-xl shadow-xl border border-slate-200 transform rotate-1 hover:rotate-0 transition duration-500 w-full">
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-24">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-bold mb-6">STEP 03</div>
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">即时数据可视化</h3>
+                    <p class="text-lg text-slate-600 mb-8 leading-loose">
+                        抓取完成后，主界面会立即生成三个维度的可视化反馈。无需等待报告生成，即可在第一步快速判断当前检索词的有效性与数据分布。
+                    </p>
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white rounded-xl border-l-4 border-blue-500 shadow-sm">
+                            <h4 class="font-bold text-base text-slate-800 mb-2">文献年份分布</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">直方图展示中英文献的时间跨度，识别学科爆发期与衰退期。</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl border-l-4 border-indigo-500 shadow-sm">
+                            <h4 class="font-bold text-base text-slate-800 mb-2">关键词全景预览</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Top 20 高频词汇条形图，快速定位相关研究热点。</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-xl border-l-4 border-teal-500 shadow-sm">
+                            <h4 class="font-bold text-base text-slate-800 mb-2">结构化明细表</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">包含标题、来源、年份、被引数及清洗后关键词的完整数据集。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <img src="img_results_overview.png" alt="抓取结果总览" class="rounded-xl shadow-xl border border-slate-200 w-full transform -rotate-1 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+
+            <div class="mb-24">
+                <div class="text-center mb-12">
+                    <div class="inline-block px-4 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold mb-4">STEP 04</div>
+                    <h3 class="text-2xl font-bold text-slate-900">深度计量回归分析</h3>
+                    <p class="text-slate-600">切换至“计量分析”标签页，获取两条关键的回归曲线</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-clock-rotate-left text-teal-600"></i> 时间-数量趋势预测
+                        </h4>
+                        <img src="img_analytics_time.png" alt="时间序列回归" class="rounded-lg mb-6 border border-slate-100 w-full transform hover:scale-105 transition duration-500">
+                        <div class="text-base text-slate-600 leading-relaxed">
+                            <p class="mb-3"><strong>分析模型：</strong> <span class="math-formula">Count = &beta;<sub>0</sub> + &beta;<sub>1</sub> &times; Year</span></p>
+                            <p><strong>核心价值：</strong> 红色的虚线不仅拟合了历史数据，更向后延伸 5 年，科学预测该领域未来的发文增长趋势。<span class="math-formula">R<sup>2</sup></span> 值越高，预测越可信。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
+                        <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass-chart text-teal-600"></i> 关键词影响力归因
+                        </h4>
+                        <img src="img_analytics_corr.png" alt="相关性分析" class="rounded-lg mb-6 border border-slate-100 w-full transform hover:scale-105 transition duration-500">
+                        <div class="text-base text-slate-600 leading-relaxed">
+                            <p class="mb-3"><strong>分析模型：</strong> <span class="math-formula">Citations = &beta;<sub>0</sub> + &beta;<sub>1</sub> &times; Frequency</span></p>
+                            <p><strong>核心价值：</strong> 识别哪些关键词具有“高频且高被引”的特征。位于回归线上方的点代表该研究方向的影响力超出了其出现频率的预期，属于高价值选题。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-20">
+                <div class="w-full">
+                    <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                        <div>
+                            <div class="inline-block px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP 05 (A)</div>
+                            <h3 class="text-2xl font-bold text-slate-900">AI 综述报告生成</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-right max-w-lg">
+                            点击生成按钮，Agent 将阅读所有抓取到的摘要，生成一份逻辑严密的学术综述。报告内容严格基于抓取到的数据，杜绝“AI 幻觉”。
+                        </p>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+                        <img src="img_report_doc.png" alt="AI综述报告" class="w-full">
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3 text-center">包含模块：领域背景、核心技术流派分类、高被引文献解读、未来趋势预测。</p>
+                </div>
+                
+                <div class="w-full">
+                    <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                        <div>
+                            <div class="inline-block px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold mb-2">STEP 05 (B)</div>
+                            <h3 class="text-2xl font-bold text-slate-900">交互式知识图谱</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-right max-w-lg">
+                            系统同步生成 HTML 格式的思维导图，将非结构化的文献知识结构化展示。结合回归分析结论，直观呈现核心研究路径。
+                        </p>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+                        <img src="img_report_mindmap.png" alt="思维导图" class="w-full">
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3 text-center">HTML 交互功能：支持节点折叠/展开，清晰展示核心关键词下的高被引文献与回归结论。</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-white"></i>
+                        <span class="font-bold text-xl text-white">ScholarAgent Pro</span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-sm">
+                        致力于利用 AI 技术重塑科研工作流，让每一位研究者都能从繁杂的数据中解放，专注于创新与思考。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">联系我们</h4>
+                    <p class="text-slate-400 text-base mb-2">
+                        <i class="fa-solid fa-envelope text-slate-500 mr-2"></i>
+                        <a href="mailto:hzc61102936@outlook.com" class="hover:text-white transition">hzc61102936@outlook.com</a>
+                    </p>
+                </div>
+                <div class="flex flex-col md:items-end">
+                    <div class="flex gap-6 mb-6">
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github text-2xl"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fa-brands fa-python text-2xl"></i></a>
+                        <a href="mailto:hzc61102936@outlook.com" class="hover:text-white transition"><i class="fa-solid fa-envelope text-2xl"></i></a>
+                    </div>
+                    <h4 class="font-semibold text-white mb-3">项目成员</h4>
+                    <p class="text-base text-slate-400 mb-4 text-right leading-relaxed">
+                        中南财经政法大学 金融学院<br>
+                        金工2302 胡智超<br>
+                        金融2302 舒雯婕<br>
+                        金融2302 彭文
+                    </p>
+                    <p class="text-sm text-slate-500">
+                        Powered by Streamlit, DeepSeek & DrissionPage <br>
+                        &copy; 2026 ScholarAgent Pro Team. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
