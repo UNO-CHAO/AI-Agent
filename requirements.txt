@@ -1,0 +1,10 @@
+akshare
+pandas
+openai
+python-dotenv
+requests
+pydantic
+markdown
+playwright
+nest_asyncio
+requests_toolbelt
